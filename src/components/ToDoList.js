@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 
 export default function TodoList() {
-    const initialTodos = ["My first todo", "My second todo"];
+    const initialTodos = ["My first todo", "My second todo", "mon gros fiak"];
     const [todos, setTodos] = useState(initialTodos);
     return (
         <div className="toDoList">
