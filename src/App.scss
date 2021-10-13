@@ -1,0 +1,42 @@
+@import './new.scss';
+
+body{
+    background-color: white;
+}
+
+.App-header{
+    background-color: rgb(238, 238, 238);
+    border-bottom: 1px solid lightgrey;
+    h1{
+        color:black
+    }
+}
+
+.addToDo{
+    form{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid lightgrey;
+        padding: 1rem 0;
+    }
+
+}
+
+.toDoList{
+    h1{
+        color:black;
+        padding: 1rem 0;
+        border-bottom: 1px solid lightgrey;
+    }
+    ul{
+        padding: 0;
+    }
+    li{
+        color:black;
+        list-style-type: none;
+    }
+    input{
+        margin: 0 0.5rem 0 0;
+    }
+}
