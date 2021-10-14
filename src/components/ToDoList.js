@@ -1,19 +1,15 @@
-import React,{useState} from "react";
+import React from "react";
+import Todo from "./Todo";
 
-export default function TodoList() {
-    const initialTodos = ["My first todo", "My second todo", "mon gros fiak"];
-    const [todos, setTodos] = useState(initialTodos);
+export default function TodoList( {todos, toggleTodo} ) {
     return (
-        <div className="toDoList">
-        <ul>
-        {todos.map((todo, index) => (
-            <li key={index}>
-            <input type="checkbox" name={todo} id={todo}/> 
-            <label htmlFor={todo}>{todo}</label> 
-            </li>
-        ))}
-        </ul>
-        </div>
+
+        todos.map((todo) => {
+            return (            
+               <Todo key={todo.id} toggleTodo={toggleTodo} todo={todo}/>
+            )
+
+        })
         
     );
 }

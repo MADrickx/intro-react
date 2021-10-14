@@ -13,14 +13,15 @@ body{
 }
 
 .addToDo{
-    form{
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        border-bottom: 1px solid lightgrey;
-        padding: 1rem 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid lightgrey;
+    padding: 1rem 0;
+    button:nth-of-type(2){
+        background-color: red;
+        margin-top: 0.5rem;
     }
-
 }
 
 .toDoList{
