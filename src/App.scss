@@ -8,7 +8,8 @@ body{
     background-color: rgb(238, 238, 238);
     border-bottom: 1px solid lightgrey;
     h1{
-        color:black
+        color:black;
+        text-align:center;
     }
 }
 
@@ -18,10 +19,18 @@ body{
     flex-direction: column;
     border-bottom: 1px solid lightgrey;
     padding: 1rem 0;
-    button:nth-of-type(2){
-        background-color: red;
-        margin-top: 0.5rem;
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        button{
+            width: 49%;
+        }
+        button:nth-of-type(2){
+            background-color: red;
+        }
     }
+
 }
 
 .toDoList{

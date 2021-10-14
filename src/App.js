@@ -19,22 +19,22 @@ function App() {
   },[todos])
 
   function toggleTodo(id){
-    const newTodos = [...todos];
+    const newTodos = [...todos];//[...] = étendre avec données de tableau
     const todo = newTodos.find(todo => todo.id === id);
     todo.complete = !todo.complete;
+    setTodos(newTodos); 
+  }
+
+  function clearToDos(){
+    const newTodos = todos.filter(todo => !todo.complete);
     setTodos(newTodos);
   }
 
-function clearToDos(){
-  const newTodos = todos.filter(todo => !todo.complete);
-  setTodos(newTodos);
-}
-
-  function HandleAddToDo(e){
+  function HandleAddToDo(){
     const name = toDoNameRef.current.value;
     if (name === '') return;
-    setTodos(prevTodos => {
-      return [...prevTodos, {id:uuidv4(), name:name, complete:false} ]
+    setTodos(a => {
+      return [...a, {id:uuidv4(), name:name, complete:false} ]
     })
     toDoNameRef.current.value = null;
   }
@@ -44,8 +44,10 @@ function clearToDos(){
       <Header/>
       <div className="addToDo">
           <input ref={toDoNameRef} type="text" placeholder="Write a new todo" />
-          <button onClick={HandleAddToDo}>Add todo</button>
-          <button onClick={clearToDos}>Clear todos</button>
+          <div className="buttons">
+            <button onClick={HandleAddToDo}>Add todo</button>
+            <button onClick={clearToDos}>Clear todos</button>
+          </div>
         </div>
       <div className="toDoList">
         <ul>
