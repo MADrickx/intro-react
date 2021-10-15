@@ -17,7 +17,6 @@ export default function Todo({todo, toggleTodo}) {
                     <span></span>
                     <div className='success'>{check}</div>
                     {todo.name}
-                
                 </label> 
                 </li>
         </>
